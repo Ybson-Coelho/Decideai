@@ -1,0 +1,294 @@
+main {
+    padding: 2rem 1.5rem 4rem;
+}
+
+.choice-container {
+    width: min(100%, 680px);
+    margin: 0 auto;
+}
+
+.choice-header {
+    margin-bottom: 2.5rem;
+}
+
+.choice-header h1 {
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.choice-header p {
+    max-width: 500px;
+    margin-top: 0.75rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.choice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.input-group label {
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.input-group input,
+.add-option input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    background: var(--white);
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.input-group input::placeholder,
+.add-option input::placeholder {
+    color: #a3a3a3;
+}
+
+.input-group input:focus,
+.add-option input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(41, 120, 255, 0.08);
+}
+
+.options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-header h2 {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#options-count {
+    display: block;
+    margin-top: 0.25rem;
+
+    color: #a3a3a3;
+    font-size: 0.8rem;
+}
+
+.add-option {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.add-option button,
+.draw-button,
+.result-actions button {
+    border: 0;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.add-option button {
+    flex-shrink: 0;
+    padding: 0 1rem;
+    background: #f3f4f6;
+    color: var(--text);
+}
+
+.add-option button:hover {
+    background: #e5e7eb;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #eeeeee;
+    border-radius: 0.7rem;
+    background: var(--white);
+}
+
+.option-name {
+    overflow: hidden;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remove-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #a3a3a3;
+    cursor: pointer;
+    font-size: 1rem;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.remove-option:hover {
+    background: #f5f5f5;
+    color: #ef4444;
+}
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    padding: 1.5rem;
+    border: 1px dashed var(--border);
+    border-radius: 0.8rem;
+    text-align: center;
+}
+
+.empty-state p {
+    max-width: 260px;
+    color: #a3a3a3;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.draw-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.95rem 1rem;
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 6px 16px rgba(41, 120, 255, 0.16);
+}
+
+.draw-button:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.draw-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 2.5rem 1.5rem;
+    border: 1px solid #eeeeee;
+    border-radius: 1rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #a3a3a3;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.result h2 {
+    color: var(--text);
+    font-size: clamp(2rem, 8vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+}
+
+.result p {
+    margin: 0.7rem 0 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.result-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.result-actions button:hover {
+    background: var(--primary-hover);
+}
+
+.result-actions .secondary {
+    background: #f3f4f6;
+    color: var(--text);
+}
+
+.result-actions .secondary:hover {
+    background: #e5e7eb;
+}
+
+@media (max-width: 480px) {
+    .choice {
+        padding: 1.5rem 1rem 3rem;
+    }
+
+    .add-option {
+        flex-direction: column;
+    }
+
+    .add-option button {
+        min-height: 44px;
+    }
+
+    .result-actions {
+        flex-direction: column;
+    }
+
+    .result-actions button {
+        width: 100%;
+    }
+}

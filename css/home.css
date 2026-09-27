@@ -1,0 +1,59 @@
+main {
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    max-width: 600px;
+    color: var(--text);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+p {
+    margin-top: 0.75rem;
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+p span {
+    color: var(--primary);
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(41, 120, 255, 0.2);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+a:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(41, 120, 255, 0.28);
+}
+
+a:active {
+    transform: translateY(0);
+}

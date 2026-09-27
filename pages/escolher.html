@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escolher por você — Decide Aí</title>
+    <meta
+      name="description"
+      content="Adicione suas opções e deixe o Decide Aí sortear uma escolha para você."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://decideai.vercel.app/pages/escolher.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Escolher por você — Decide Aí" />
+    <meta
+      property="og:description"
+      content="Adicione suas opções e deixe o Decide Aí sortear uma escolha para você."
+    />
+    <meta
+      property="og:url"
+      content="https://decideai.vercel.app/pages/escolher.html"
+    />
+    <meta property="og:site_name" content="Decide Aí" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Escolher por você — Decide Aí" />
+    <meta
+      name="twitter:description"
+      content="Adicione suas opções e deixe o Decide Aí sortear uma escolha para você."
+    />
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/escolher.css" />
+  </head>
+
+  <body>
+    <main>
+      <section class="choice-container">
+        <header class="choice-header">
+          <h1>O que vamos decidir?</h1>
+
+          <p>Adicione algumas opções e deixe o Decide Aí escolher por você.</p>
+        </header>
+
+        <form class="choice-form">
+          <div class="input-group">
+            <label for="choice-name"> O que você precisa decidir? </label>
+
+            <input
+              type="text"
+              id="choice-name"
+              name="choice-name"
+              placeholder="Ex.: O que vou comer hoje?"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="options-section">
+            <div class="section-header">
+              <div>
+                <h2>Suas opções</h2>
+                <span id="options-count">0 opções</span>
+              </div>
+            </div>
+
+            <div class="add-option">
+              <input
+                type="text"
+                id="option-input"
+                placeholder="Digite uma opção..."
+                autocomplete="off"
+              />
+
+              <button type="button" id="add-option">Adicionar</button>
+            </div>
+
+            <div id="options-list" class="options-list">
+              <div class="empty-state" id="empty-state">
+                <p>Adicione pelo menos duas opções para começar.</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="draw-button" id="draw-button" disabled>
+            <i data-lucide="dices"></i>
+            Sortear
+          </button>
+        </form>
+
+        <section class="result" id="result" hidden>
+          <span class="result-label">A escolha é...</span>
+
+          <h2 id="result-text"></h2>
+
+          <p>O Decide Aí decidiu por você.</p>
+
+          <div class="result-actions">
+            <button type="button" id="draw-again">
+              <i data-lucide="dices"></i>
+              Sortear novamente
+            </button>
+
+            <button type="button" class="secondary" id="new-choice">
+              Nova escolha
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/escolher.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
